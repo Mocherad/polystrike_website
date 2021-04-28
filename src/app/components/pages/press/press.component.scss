@@ -1,0 +1,16 @@
+.press-image-container {
+  display: -ms-flexbox;
+  display: flex;
+  /* Center vertically */
+  align-items: center;
+  /*Center horizontaly */
+  justify-content: center;
+
+  /*Center horizontaly ie */
+  -ms-flex-pack: center;
+}
+
+.press-image-btn-wrapper {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}

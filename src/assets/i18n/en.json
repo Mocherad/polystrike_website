@@ -1,0 +1,101 @@
+{
+  "navbar": {
+    "follow": {
+      "twitter": "Follow us on Twitter",
+      "vk": "Follow us on Vk",
+      "inst": "Follow us on Instagram",
+      "patreon": "Follow us on Patreon",
+      "discord": "Follow us on Discord"
+    },
+    "nav": {
+      "faq": "FAQ",
+      "langs": {
+        "en": "English",
+        "ru": "Русский"
+      },
+      "top100": "TOP 100"
+    }
+  },
+
+  "footer": {
+    "contacts": {
+      "title": "Contacts",
+      "name": "Mark Mocherad"
+    },
+    "nav": {
+      "press": "Press"
+    }
+  },
+
+  "btn": {
+    "next": "Next",
+    "prev": "Previous",
+    "back": "Back"
+  },
+
+  "landing": {
+    "viewTrailer": "View TRAILER",
+    "buyBP": "Buy Battle Pass",
+    "aboutGame": {
+      "title": "What if you could play CS:GO, remade, in Source 2 as a top down shooter?",
+      "descr": "Engage in an incredibly realistic brand of terrorist warfare in this wildly popular team-based game. Ally with teammates to complete strategic missions. Take out enemy sites. Rescue hostages. Your role affects your team's success. Your team's success affects your role."
+    }
+  },
+
+  "press": {
+    "title": "Press",
+    "downloadBtn": "Download"
+  },
+
+  "faq": {
+    "title": "General",
+    "QA": {
+      "1" : {
+        "q": "1. How do I play PolyStrike ?",
+        "a": "First things first, you're going to have to install the Dota 2 game client. To do so, make sure you search for the base game on Steam, and then install it as usual. Once you've installed Dota 2, launch Dota 2, go to the Arcade page, search for PolyStrike, and then add the mode to your installation."
+      },
+      "2" : {
+        "q": "2. Does PolyStrike support Source 2?",
+        "a": "Yes, PolyStrike supports Source 2, as it's custom game in Dota 2 Client"
+      },
+      "3" : {
+        "q": "3. What is the best way to follow news?"
+      }
+    }
+  },
+
+  "auth": {
+    "title": "Battle Pass",
+    "thanks": "You already have a Battle Pass! Thank you for being with us!",
+    "steps": {
+      "buy": "Payment",
+      "steam.text": "Sign in with Steam",
+      "patreon.text": "Sign in with Patreon",
+      "pay.text": {
+        "line1": "To get the Battle Pass, you need to become a Patron.",
+        "line2": "Please click on the button to proceed to payment:",
+        "btnText": "To Pay"
+      }
+    },
+    "login": {
+      "suc": "Authorization Successful!",
+      "already.member": "You already has Battle Pass!",
+      "already.has.acc": "Patreon Account automatically detected"
+    }
+  },
+
+  "mass-media": {
+    "title": "Media Mentions"
+  },
+
+  "top": {
+    "players": {
+      "title": "Top 100 Users By Matches Played",
+      "notes": "Data is updated once an hour!",
+      "player": "Player",
+      "matches.played": "Matches Played",
+      "win.rate": "Win Rate",
+      "bp.tooltip": "Players in the TOP-10 get a free Battle Pass for 1 week or while they are in the top-10."
+    }
+  }
+}

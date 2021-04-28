@@ -1,0 +1,17 @@
+.ps-page-wrapper {
+  background-color: #0b1011;
+  color: white;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  &__main {
+    padding-top: 100px;
+  }
+}
+
+.ps-header {
+  margin-left: 10px;
+  padding-bottom: 30px;
+}

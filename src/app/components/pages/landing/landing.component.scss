@@ -1,0 +1,44 @@
+.background-movie {
+  display: block;
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+.block-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 36px 36px rgba(11,16,17);
+  top: 0;
+  left: 0;
+}
+
+.game-logo-main {
+  padding: 0 0 50px 0;
+  &_img {
+    max-width: 45vw;
+  }
+}
+
+.main-body-section {
+  padding-top: 20px;
+}
+
+.slider-container {
+  position: relative;
+  overflow: auto;
+  height: auto;
+  width: 85%;
+  border-radius: 4px;
+  &_image-box {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+.bp-buy-btn {
+  color: cornflowerblue;
+}

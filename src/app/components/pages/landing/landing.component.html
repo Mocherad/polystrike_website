@@ -1,0 +1,47 @@
+<div class="page-header" data-parallax="true">
+    <div class="background-movie">
+        <video #backGameMov autoplay="autoplay" preload="auto" loop="loop" muted="muted"
+               (pause)="backGameMov.muted=true; backGameMov.play()"
+               (loadeddata)="backGameMov.muted=true; backGameMov.play()"
+               (canplaythrough)="backGameMov.muted=true; backGameMov.play()">
+            <source src="./assets/videos/background-main-video.webm" type="video/webm"/>
+            <source src="./assets/videos/background-main-video.mp4" type="video/webm"/>
+        </video>
+    </div>
+    <div class="block-shadow"></div>
+    <div class="filter"></div>
+    <div class="container">
+        <div class="motto text-center game-logo-main">
+            <img class="game-logo-main_img" src="assets/img/game-logo.png">
+            <br />
+            <a href="https://www.youtube.com/watch?v=BkpUejpdZpQ" target="_blank"
+               class="btn btn-outline-neutral btn-round">
+                <fa-icon [icon]="faPlay"></fa-icon>
+                {{ 'landing.viewTrailer' | translate }}
+            </a>
+            <a routerLink="/auth"
+               class="btn btn-outline-neutral btn-round">
+                <fa-icon [icon]="faPatreon"></fa-icon>
+                {{ 'landing.buyBP' | translate }}
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="section section-dark text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <h2 class="title">{{ 'landing.aboutGame.title' | translate }}</h2>
+                    <p class="description">
+                        {{ 'landing.aboutGame.descr' | translate }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-demo-screens></app-demo-screens>
+    <app-mass-media></app-mass-media>
+</div>

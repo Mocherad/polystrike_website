@@ -1,0 +1,23 @@
+<div class="ps-page-wrapper">
+    <div class="ps-page-wrapper__main">
+        <div class="container">
+            <div class="ps-header text-center">
+                <h1>
+                    <span class="note">{{ 'press.title' | translate }}</span>
+                </h1>
+            </div>
+            <div class="row">
+                <div *ngFor="let image of images" class="col-xs-8 col-sm-6 col-md-6">
+                    <div class="press-image-container">
+                        <img height="250px" [src]="image" class="img-rounded img-responsive">
+                    </div>
+                    <p class="text-center press-image-btn-wrapper">
+                        <a [href]="image" download="" target="_blank"
+                           class="btn btn-outline-neutral btn-round"
+                        >{{ 'press.downloadBtn' | translate }}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

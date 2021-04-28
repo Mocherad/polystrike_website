@@ -1,0 +1,94 @@
+<div class="ps-page-wrapper">
+    <div class="ps-page-wrapper__main">
+        <div class="container">
+            <div class="ps-header text-center">
+                <h1>
+                    <span class="note">{{ 'auth.title' | translate }}</span>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div *ngIf="isActiveMember" class="center-items">
+                        <p>
+                            {{'auth.thanks' | translate}}
+                        </p>
+                    </div>
+                    <div #stepperDiv class="bs-stepper" [hidden]="!currentStep || isActiveMember">
+                        <div class="bs-stepper-header" role="tablist">
+                            <!-- your steps here -->
+                            <div class="step" data-target="#steam-auth">
+                                <button type="button" class="step-trigger" role="tab"
+                                        aria-controls="steam-auth" id="steam-auth-trigger">
+                                    <span class="bs-stepper-circle"
+                                          [class.step-passed]="currentStep>1">
+                                        1
+                                    </span>
+                                    <span class="bs-stepper-label">Steam</span>
+                                </button>
+                            </div>
+                            <div class="line ps-stp__line"></div>
+                            <div class="step" data-target="#patreon-auth">
+                                <button type="button" class="step-trigger"
+                                        role="tab" aria-controls="patreon-auth"
+                                        id="patreon-auth-trigger">
+                                    <span class="bs-stepper-circle"
+                                          [class.step-passed]="currentStep>2">
+                                        2
+                                    </span>
+                                    <span class="bs-stepper-label">Patreon</span>
+                                </button>
+                            </div>
+                            <div class="line ps-stp__line"></div>
+                            <div class="step" data-target="#patreon-buy">
+                                <button type="button" class="step-trigger"
+                                        role="tab" aria-controls="patreon-buy"
+                                        id="patreon-buy-trigger">
+                                    <span class="bs-stepper-circle">3</span>
+                                    <span class="bs-stepper-label">{{'auth.steps.buy' | translate}}</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bs-stepper-content">
+                            <!-- your steps content here -->
+                            <div id="steam-auth" class="content" role="tabpanel"
+                                 aria-labelledby="steam-auth-trigger">
+                                <div class="center-items">
+                                    <p>{{'auth.steps.steam.text' | translate}}</p>
+                                    <div class="auth-btn" (click)="loginSteam()">
+                                        <img class="img-rounded img-responsive"
+                                             src="./assets/img/services/steam-login-btn.png"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="patreon-auth" class="content" role="tabpanel"
+                                 aria-labelledby="patreon-auth-trigger">
+                                <div class="center-items">
+                                    <p>{{'auth.steps.patreon.text' | translate}}</p>
+                                    <div class="auth-btn btn btn-outline-danger btn-round" (click)="loginPatreon()">
+                                        <img class="img-rounded img-responsive"
+                                             src="./assets/img/services/patreon-login-btn.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="patreon-buy" class="content" role= "tabpanel"
+                                 aria-labelledby="patreon-buy-trigger">
+                                <div class="center-items">
+                                    <p>{{'auth.steps.pay.text.line1' | translate}}</p>
+                                    <p>{{'auth.steps.pay.text.line2' | translate}}</p>
+                                    <a class="btn btn-outline-neutral btn-round"
+                                       href="https://www.patreon.com/join/mocherad/checkout?rid=473400&cadence=1">
+                                        <fa-icon size="2x" [icon]="faPatreon"></fa-icon>
+                                        <div class="text-center">
+                                            {{ 'auth.steps.pay.text.btnText' | translate}}
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

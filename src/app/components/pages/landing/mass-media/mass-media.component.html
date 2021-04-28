@@ -1,0 +1,30 @@
+<div class="section section-dark text-center">
+    <div class="container">
+        <h2 class="title">{{'mass-media.title' | translate}}</h2>
+
+
+        <div class="row mm-row">
+            <div class="col-md-4" *ngFor="let men of mentions">
+                <div class="card card-profile card-plain">
+                    <div class="card-avatar">
+                        <a [href]="men.url" target="_blank">
+                            <img [src]="men.imgUrl" [alt]="men.title">
+                        </a>
+                    </div>
+                    <div class="card-block">
+                        <a [href]="men.url" target="_blank">
+                            <div>
+                                <h4 class="card-title">{{men.title}}</h4>
+                                <h6 class="card-category">{{men.mediaName}}</h6>
+                            </div>
+                        </a>
+                        <p class="card-description text-center">
+                            {{men.descr}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

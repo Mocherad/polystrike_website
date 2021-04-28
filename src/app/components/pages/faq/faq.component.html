@@ -1,0 +1,44 @@
+<div class="ps-page-wrapper">
+    <div class="ps-page-wrapper__main">
+        <div class="container">
+            <div class="ps-header text-center">
+                <h1>
+                    <span class="note">{{ 'faq.title' | translate }}</span>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <ngb-accordion #acc="ngbAccordion">
+                        <ngb-panel [title]="'faq.QA.1.q' | translate">
+                            <ng-template ngbPanelContent>
+                                <p class="note">
+                                    {{'faq.QA.1.a' | translate}}
+                                </p>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/DO6e8Sv_7sw"
+                                        frameborder="0" allowfullscreen
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                ></iframe>
+                            </ng-template>
+                        </ngb-panel>
+                        <ngb-panel [title]="'faq.QA.2.q' | translate">
+                            <ng-template ngbPanelContent>
+                                <p class="note">
+                                    {{'faq.QA.2.a' | translate}}
+                                </p>
+                            </ng-template>
+                        </ngb-panel>
+                        <ngb-panel [title]="'faq.QA.3.q' | translate">
+                            <ng-template ngbPanelContent>
+                                <a class="nav-link" rel="tooltip" title="Follow us on Twitter"
+                                   data-placement="bottom" href="https://twitter.com/markmocherad" target="_blank">
+                                    <fa-icon size="2x" [icon]="faTwitter"></fa-icon> Twitter
+                                </a>
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

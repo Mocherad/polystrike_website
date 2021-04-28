@@ -1,0 +1,89 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <a routerLink="/" class="navbar-brand">Polystrike</a>
+            <button #togglerBtn class="navbar-toggler navbar-burger" type="button" data-toggle="collapse"
+                    data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse" id="navbarToggler">
+            <!-- LEFT PART MENU -->
+            <ul class="navbar-nav" [class.h-50]="togglerBtn.classList.contains('toggled')">
+                <li class="nav-item">
+                    <a class="nav-link" rel="tooltip" [title]="'navbar.follow.twitter' | translate"
+                       data-placement="bottom" href="https://twitter.com/markmocherad" target="_blank">
+                        <fa-icon size="2x" [icon]="icons.twitter"></fa-icon>
+                        <p class="d-lg-none"> Twitter</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" rel="tooltip" [title]="'navbar.follow.vk' | translate"
+                       data-placement="bottom" href="https://vk.com/polystrike_ru" target="_blank">
+                        <fa-icon size="2x" [icon]="icons.vk"></fa-icon>
+                        <p class="d-lg-none"> Vk</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" rel="tooltip" [title]="'navbar.follow.inst' | translate"
+                       data-placement="bottom" href="https://www.instagram.com/markmocherad" target="_blank">
+                        <fa-icon size="2x" [icon]="icons.instagram"></fa-icon>
+                        <p class="d-lg-none"> Instagram</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" rel="tooltip" [title]="'navbar.follow.patreon' | translate"
+                       data-placement="bottom" href="https://www.patreon.com/mocherad" target="_blank">
+                        <fa-icon size="2x" [icon]="icons.patreon"></fa-icon>
+                        <p class="d-lg-none"> Patreon</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" rel="tooltip" [title]="'navbar.follow.discord' | translate"
+                       data-placement="bottom" href="https://discordapp.com/invite/JZ5TH4Z" target="_blank">
+                        <fa-icon size="2x" [icon]="icons.discord"></fa-icon>
+                        <p class="d-lg-none"> Discord</p>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- RIGHT PART MENU -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" *ngIf="!isCurrentPath('/statistic/top100')">
+                    <a routerLink="/statistic/top100" class="nav-link ps-menu-item">
+                        {{'navbar.nav.top100' | translate}}
+                    </a>
+                </li>
+
+                <li class="nav-item" *ngIf="!isCurrentPath('/faq')">
+                    <a routerLink="/faq" class="nav-link ps-menu-item">
+                        {{'navbar.nav.faq' | translate}}
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+                    <div ngbDropdown class="dropdown" placement="bottom-left">
+                        <a class="nav-link" id="dropdownLang" ngbDropdownToggle>
+                            <fa-icon [icon]="icons.globe"></fa-icon>
+                            {{translateService.currentLang}}
+                        </a>
+                        <div ngbDropdownMenu aria-labelledby="dropdownLang"
+                             class="ps-dropdown__menu">
+                            <ng-container *ngFor="let lang of locales; index as idx">
+                                <button class="dropdown-item"
+                                        [disabled]="translateService.currentLang == lang"
+                                        (click)="changeLocale(lang)">
+                                    {{'navbar.nav.langs.' + lang | translate}}
+                                </button>
+                                <div *ngIf="idx < locales.length - 1" class="dropdown-divider"></div>
+                            </ng-container>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

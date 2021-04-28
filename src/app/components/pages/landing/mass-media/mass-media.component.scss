@@ -1,0 +1,13 @@
+.mm-row {
+  &.row {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+
+  // Disable scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+
+}

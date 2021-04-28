@@ -1,0 +1,33 @@
+<footer class="footer">
+    <div class="section-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ft-left-container">
+                    <span><h4>{{ 'footer.contacts.title' | translate }}: </h4></span>
+                    <div>
+                        <fa-icon [icon]="faUser"></fa-icon>
+                        {{ 'footer.contacts.name' | translate }}
+                    </div>
+                    <div>
+                        <fa-icon [icon]="faEnvelope"></fa-icon>
+                        markmocherad@gmail.com
+                    </div>
+                </div>
+                <nav class="footer-nav col-md-4 ft-center-container">
+                    <ul>
+                        <li *ngIf="!isCurrentPath('/press')">
+                            <a routerLink="/press">
+                                {{ 'footer.nav.press' | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="credits ml-auto col-md-4 ft-right-container">
+                    <span class="copyright">
+                        © {{test | date: 'yyyy'}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
